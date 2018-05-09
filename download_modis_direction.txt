@@ -1,0 +1,29 @@
+	MOD13Q1.006
+	MYD13Q1.006
+
+	MOD13Q1.005
+	MYD13Q1.005
+-- Test ---
+c:\pyModis-2.0.6>modis_download.py -I -r -t h27v07 -f 2008-01-01 -e 2008-01-02 c:/Workspace/lst_terra/
+c:\pyModis-2.0.6>modis_download.py -I -r -t h27v07 -f 2008-01-01 -e 2008-01-02 c:/Workspace/lst_terra/
+modis_download.py -U sakda.homhuan@gmail.com -P earthDa45060071 -r -p MYD11A1.005 -t h27v07 -f 2008-01-01 -e 2008-01-02 c:/Workspace/lst_terra/ 
+modis_convert.py -s "( 1 1 1 1 1 1 1 1 1 1 1 1 )" -o mod.tif -e 4326 MYD13Q1.A2017009.h27v07.005.2017026044348.hdf
+
+
+modis_convert.py -s "( 1 0 0 0 0 0 0 0 0 0 )" -o mod.tif -e 4326 C:/xampp/htdocs/modis/MYD13Q1.A2010009.h27v07.005.2010027170315.hdf
+
+-- OK---
+modis_download.py -U sakda.homhuan@gmail.com -P earthDa45060071 -r -p MOD13Q1.006 -t h27v07 -f 2017-01-01 -e 2017-11-30 C:/Workspace/mos_ndvi_mod006/
+modis_download.py -U sakda.homhuan@gmail.com -P earthDa45060071 -r -s MOLA -p MYD13Q1.006 -t h27v07 -f 2017-01-01 -e 2017-11-30 C:/Workspace/mos_ndvi_myd006/
+
+modis_download.py -U sakda.homhuan@gmail.com -P earthDa45060071 -r -s MOLT -p MOD13Q1.006 -t h27v07 -f 2017-01-01 -e 2017-12-31 C:/Workspace/mos_ndvi_mod005/
+modis_download.py -U sakda.homhuan@gmail.com -P earthDa45060071 -r -s MOLA -p MYD13Q1.006 -t h27v07 -f 2017-01-01 -e 2017-12-31 C:/workspace/modis_download/
+
+## RT
+modis_download.py -U sakda.homhuan@gmail.com -P earthDa45060071 -r -s MOLT -p MOD09A1.006 -t h27v07 -f 2010-01-01 -e 2010-12-31 C:/Workspace/modis/MOD09_2010
+modis_download.py -U sakda.homhuan@gmail.com -P earthDa45060071 -r -s MOLA -p MYD09A1.006 -t h27v07 -f 2010-01-01 -e 2010-12-31 C:/Workspace/modis/MOD09_2010
+
+data source
+https://mrcdata.dide.ic.ac.uk/wiki/index.php/MODIS
+https://modis.gsfc.nasa.gov/data/dataprod/mod13.php
+https://lpdaac.usgs.gov/dataset_discovery/modis/modis_products_table
